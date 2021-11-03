@@ -5,10 +5,8 @@ import { CourierProvider } from "@trycourier/react-provider";
 
 import App from "./App";
 
-const COURIER_CLIENT_KEY = process.env.REACT_APP_COURIER_CLIENT_KEY;
-const COURIER_USER_ID =
-  localStorage.getItem("COURIER_USER_ID") ||
-  Math.round(Math.random() * 10e16).toString(36);
+const COURIER_CLIENT_KEY = "MTU2ODIxYzctZDY4OC00NTg0LWJmYmQtNjIwNzY2NTIxNTc1";
+const COURIER_USER_ID = "shreythecray"
 
 localStorage.setItem("COURIER_USER_ID", COURIER_USER_ID);
 

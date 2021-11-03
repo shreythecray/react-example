@@ -2,7 +2,7 @@ import { CourierClient } from "@trycourier/courier";
 import { Handler, HandlerResponse } from "@netlify/functions";
 
 const courier = CourierClient({
-  authorizationToken: process.env.COURIER_AUTH_TOKEN,
+  authorizationToken: "dk_prod_0S8GENGCW740PAJEBZDWZ9X4YA4M",
 });
 
 const buildResponse = (statusCode: number, body: object): HandlerResponse => ({
@@ -25,14 +25,14 @@ const handler: Handler = async (event) => {
 
   try {
     const response = await courier.send({
-      eventId: process.env.COURIER_NOTIFICATION_ID,
-      recipientId: params.userId,
+      eventId: "71WXG9JXA447WMGS8EY06TCT6EQ1",
+      recipientId: "2d7246cb-4747-4c65-bb95-88cbfb90c734",
       profile: {
         courier: {
-          channel: params.userId,
+          channel: "shreythecray",
         },
       },
-      data: params,
+      data: {},
       override: {},
     });
 
